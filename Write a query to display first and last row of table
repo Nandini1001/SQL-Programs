@@ -1,0 +1,1 @@
+select * from (select *,row_number() over() as rnk from student) as t1 where rnk in(1,(select count(*) from student));
